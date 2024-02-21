@@ -1,0 +1,27 @@
+.page {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        1fr min(var(--trimmed-content-width), 100%)
+        1fr;
+    max-width: var(--outer-content-width);
+    margin: 0 auto;
+    padding: 64px var(--viewport-padding) 32px;
+    background: var(--color-page-background);
+    box-shadow: var(--shadow-page);
+}
+
+.header {
+    grid-column: 2;
+}
+
+.page h2 {
+    text-align: center;
+}
+
+.content {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
