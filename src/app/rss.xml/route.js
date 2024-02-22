@@ -19,7 +19,7 @@ export async function GET() {
         const itemOptions = {
             title: title,
             date: publishedOn,
-            description: description,
+            description: BLOG_DESCRIPTION,
             url: `./${slug}`,
         };
         feed.item(itemOptions);

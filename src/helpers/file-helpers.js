@@ -26,8 +26,16 @@ export async function getBlogPostList() {
   );
 }
 
+
+const delay = (ms) => new Promise((resolve) => (
+  setTimeout(resolve, ms)
+));
+
 export const loadBlogPost = React.cache(async function (slug) {
   console.log('reading', slug)
+
+  await delay(2000);
+
   const rawContent = await readFile(
     `/content/${slug}.mdx`
   );
